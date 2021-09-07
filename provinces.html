@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  Map leaflet.css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <!--  Map leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <style>
+        #map {
+            float: left;
+            width: 100%;
+            height: 735px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"> </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <script>
+        var startPoint = [14.07857, 100.6021323];
+        var map = L.map('map', {
+            trackResize: true,
+            zoomControl: false
+        }).setView(startPoint, 8);
+
+
+        var Google = L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            attribution: '&copy; google',
+            minZoom: 2,
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        }).addTo(map);
+
+
+        L.control.scale().addTo(map);
+
+
+
+
+        var region_GeoJson;
+        var url = 'https://raw.githubusercontent.com/chingchai/OpenGISData-Thailand/master/provinces.geojson';
+
+        $.ajax({
+            dataType: "json",
+            url: url,
+            type: 'GET',
+            cache: false,
+            success: function(response) {
+
+                console.log(response)
+                region_GeoJson = new L.geoJson(response, {
+                    onEachFeature: onEachFeature
+                });
+
+                region_GeoJson.addTo(map);
+                map.addLayer(region_GeoJson);
+
+                map.fitBounds(region_GeoJson.getBounds(), {
+                    padding: [10, 10]
+                });
+
+
+            },
+            error: function(e) {
+                console.log("There was an error with your request...");
+                console.log("error: " + JSON.stringify(e));
+            }
+        });
+
+
+        function onEachFeature(feature, layer) {
+            layer._leaflet_id = feature.properties.pro_th;
+
+            var popupContent = "<b>" + feature.properties.pro_th + "</b> <b>(" + feature.properties.pro_en + ")</b><br>" +
+                "<b>" + feature.properties.reg_royin + "</b> <b>[" + feature.properties.reg_nesdb + "]</b>" +
+                "<p><b>perimeter:</b> " + feature.properties.perimeter + "</p>" +
+                "<p><b>area_sqkm:</b> " + feature.properties.area_sqkm + "</p>";
+            if (feature.properties && feature.properties.popupContent) {
+                popupContent += feature.properties.popupContent;
+            }
+
+            layer.bindPopup(popupContent);
+        }
+    </script>
+
+</body>
+
+</html>
