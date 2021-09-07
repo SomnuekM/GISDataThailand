@@ -10,4 +10,7 @@ Example2(แสดงผลขอบเขตจังหวัด[d3.js]) : [De
 ![Screenshot 2021-09-07 143048](https://user-images.githubusercontent.com/58202287/132303362-936141b2-ba20-46cb-bcae-c3bb564d7d76.jpg)
 
 
-อ้างอิง: https://github.com/chingchai/OpenGISData-Thailand
+อ้างอิง: 
+https://github.com/chingchai/OpenGISData-Thailand
+http://bl.ocks.org/adkdev/fe15a54ad3748c72e059475e3f43d462
+
