@@ -5,7 +5,7 @@ Example1(แสดงผลขอบเขตจังหวัด) : [Demo1](ht
 
 ![Web capture_7-9-2021_14717_](https://user-images.githubusercontent.com/58202287/132300022-ad7063e7-4ecf-4e2d-ad3b-16b512a15d9f.jpeg)
 
-Example2(แสดงผลขอบเขตจังหวัด[d3.js]) : [Demo2](https://somnuekm.github.io/GISDataThailand/) 
+Example2(แสดงผลขอบเขตจังหวัด[d3.js]) : [Demo2](https://somnuekm.github.io/GISDataThailand/provincesD3JS.html) 
 
 ![Screenshot 2021-09-07 143048](https://user-images.githubusercontent.com/58202287/132303362-936141b2-ba20-46cb-bcae-c3bb564d7d76.jpg)
 
