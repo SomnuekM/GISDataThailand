@@ -9,6 +9,7 @@ Example2(แสดงผลขอบเขตจังหวัด[d3.js]) : [De
 อ้างอิง2:http://bl.ocks.org/adkdev/fe15a54ad3748c72e059475e3f43d462
 ![Screenshot 2021-09-07 143048](https://user-images.githubusercontent.com/58202287/132303362-936141b2-ba20-46cb-bcae-c3bb564d7d76.jpg)
 
+Example3(แสดงผลขอบเขตจังหวัด-ข้อมูลเก่า[d3.js]) : [Demo3](https://somnuekm.github.io/GISDataThailand/oldVer_provincesD3JS.html) <br/>
 
 เพิ่มเติมข้อมูลที่เกี่ยวกับแผนที่ประเทศไทย: <br/>
 Data 1 [Json] : https://github.com/apisit/thailand.json <br/>
