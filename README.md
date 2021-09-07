@@ -16,6 +16,7 @@ Data 2 : https://github.com/cvibhagool/thailand-map <br/>
 Data 3 : https://github.com/pnphannisa/awesome-thai-gis <br/>
 Data 4 : https://www.arcgis.com/apps/mapviewer/index.html?layers=ffd2fe3a5c954038aea40600ca0728b8&layerId=0 <br/>
 Data 5 : https://data.thailand.opendevelopmentmekong.net/th/dataset/thailand-provincial-boundaries?type=dataset <br/>
-Data 6 Hospital : https://data.thailand.opendevelopmentmekong.net/th/dataset/health-facilities-in-thailand-2020?type=dataset <br/>
+Data 6 [Hospital] : https://data.thailand.opendevelopmentmekong.net/th/dataset/health-facilities-in-thailand-2020?type=dataset <br/>
+Data 7 [Vector] : https://github.com/BorntoDev/Thailand-Map-Vector <br/>
 
 
