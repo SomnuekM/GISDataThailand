@@ -11,8 +11,8 @@ Example2(แสดงผลขอบเขตจังหวัด[d3.js]) : [De
 
 
 เพิ่มเติมข้อมูลที่เกี่ยวกับแผนที่ประเทศไทย: <br/>
-Data 1 : https://github.com/apisit/thailand.json <br/>
-Data 2 : https://github.com/cvibhagool/thailand-map <br/>
+Data 1 [Json] : https://github.com/apisit/thailand.json <br/>
+Data 2 [Json] : https://github.com/cvibhagool/thailand-map <br/>
 Data 3 : https://github.com/pnphannisa/awesome-thai-gis <br/>
 Data 4 : https://www.arcgis.com/apps/mapviewer/index.html?layers=ffd2fe3a5c954038aea40600ca0728b8&layerId=0 <br/>
 Data 5 : https://data.thailand.opendevelopmentmekong.net/th/dataset/thailand-provincial-boundaries?type=dataset <br/>
